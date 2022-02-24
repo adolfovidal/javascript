@@ -1,19 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiros passos com DOM</title>
     <style>
-        body {
-            background: rgba(111, 111, 231, 0.445)5);
+        body{
+            background: rgb(143, 165, 238);
+            color: white;
+            font: normal 18pt Arial;
         }
     </style>
 </head>
 <body>
-    <h1>Iniciando estudo com DOM</h1>
-    <p>Aqui vai o resultado </p>
-    <div>Clique em mim</div>
+    <h1>Iniciando estudos com DOM</h1> 
+    <!--
+        Document Object Model
+        window
+        location - document - history
+        document (child)
+        html (parent)
+        head - body (child)
+        head
+        meta - title
+        body
+        h1 - p - div
+        p
+        strong 
+    -->
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">Clique em mim</div>
+    <script>
+        /*
+        Adicionar componentes
+        window.document.write('Olá, Mundo!')  
+        window.document.write(window.document.charset)
+        window.document.write(window.navigator.appName)
+        window.decument.write(window.document.URL) 
+        */
+        var corpo = window.document.body
+        // var d = window.document.getElementById('msg')
+        var p1 = window.document.getElementsByTagName('p')[1]
+        // var d = window.document.getElementsByName('msg') [0]
+        var d = window.document.querySelector('div.msg') // id representada por #, toda classe representada por .
+        d.style.background = 'red'
+        /*
+        window.document.write('Está escrito assim: ' + p1.innerText) 
+        Texto dentro do parágrafo
+        corpo.style.background = 'yellow'
+        p1.style.color = 'blue'
+        d.style.background = 'green'
+        d.innerText = "Estou aguardando"
+        window.document.getElementById('msg').innerText = 'Olá!'
+        document.write(p1.innerHTML)
+        window.alert(p1.innerText)
+        d.innerText = 'Olá!'
+         
+        por mMarca - getElementByTagName()[]
+        por ID - getElementeByid()
+        por Nome - getElementsByName()
+        por Classe - getElementsByClassName()
+        */
+    </script>
 </body>
 </html>
