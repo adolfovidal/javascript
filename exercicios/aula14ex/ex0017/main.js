@@ -1,16 +1,18 @@
 function getmultab() {
     let indexOfNumber = document.querySelector('input#ntxt')
-    let areaOfMultipicationTable = document.querySelector('select#selecttab')
+    let areaOfMultTable = document.querySelector('select#selecttab')
     if (indexOfNumber.value.length == 0) {
-        window.alert('Please, enter a number!')
+        window.alert('Please, enter a number!') // alerta de caixa sem elemento
     } else {
         let typedNumber = Number(indexOfNumber.value)
         let counter = 1
+        areaOfMultTable.innerHTML = ''
         while (counter <= 10) {
-            let optionElement = document.createElement('option')
-            optionElement.text = `${typedNumber} x ${counter} = ${typedNumber*counter}`
-            areaOfMultipicationTable.appendChild(optionElement)
-            c++
+            let optionsElement = document.createElement('option')
+            optionsElement.text = `${typedNumber} x ${counter} = ${typedNumber*counter}`
+            optionsElement.value = `multtable${counter}` // item selecioando
+            areaOfMultTable.appendChild(optionsElement)
+            counter++ // incrimento
         }
     }
 
